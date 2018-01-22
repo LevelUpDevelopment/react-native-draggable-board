@@ -226,7 +226,7 @@ class Board extends React.Component {
       transform: [{rotate: interpolatedRotateAnimation}],
       position: 'absolute',
       zIndex: zIndex,
-      top: this.state.y - this.TRESHOLD,
+      top: this.state.y - (this.props.treshold ? this.props.treshold  : this.TRESHOLD),
       left: this.verticalOffset + this.state.x
     };
   }
