@@ -57,7 +57,7 @@ class Registry {
     return itemsMap;
   }
 
-  updateData(data) {
+  updateData(data, updateReplacingData) {
     if(updateReplacingData) { this.map = {}; } // :: updateReplacingData >> True if when updating content replace all data or appending to the existing one.
     const columns = _.range(data.length).map((columnIndex) => {
       const columnData = data[columnIndex];
