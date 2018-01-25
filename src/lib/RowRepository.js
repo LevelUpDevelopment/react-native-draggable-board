@@ -29,8 +29,9 @@ class RowRepository {
     return this.registry.visibleItems(columnId);
   }
 
-  updateData(data) {
-    this.registry.updateData(data);
+  updateData(data, updateReplacingData) {
+    // :: updateReplacingData >> True if when updating content replace all data or appending to the existing one.
+    this.registry.updateData(data, updateReplacingData);
   }
 
   addListener(columnId, event, callback) {
